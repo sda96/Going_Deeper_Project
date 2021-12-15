@@ -6,3 +6,6 @@ AIFFEL 교육과정 중 NLP Going Deeper Project와 내용 정리
 - [Byte Pair Encoding](https://arxiv.org/pdf/1508.07909.pdf)
 - [SentencePiece](https://arxiv.org/pdf/1808.06226.pdf)
 - [ELMo](https://arxiv.org/pdf/1802.05365.pdf)
+
+한국어 사전 학습된 임베딩 벡터 다운로드
+- https://github.com/Kyubyong/wordvectors
