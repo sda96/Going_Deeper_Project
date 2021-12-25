@@ -13,7 +13,7 @@ AIFFEL 교육과정 중 NLP Going Deeper Project와 내용 정리
 - https://github.com/Kyubyong/wordvectors
 
 
-## 두 번째 프로젝트 : 단어장의 크기에 따른 머신 러닝 모델 성능 비교 - [블로그 정리글](https://sda96.github.io/2021-12/machine_learning_models_preview)
+## 두 번째 프로젝트 : 단어장의 크기에 따른 모델 성능 비교 - [블로그 정리글](https://sda96.github.io/2021-12/machine_learning_models_preview)
 사용된 머신 러닝 모델
 - [MultiNB](https://www.youtube.com/watch?v=3JWLIV3NaoQ)
 - [ComNB](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.ComplementNB.html)
