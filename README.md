@@ -1,7 +1,7 @@
 # Going_Deeper_Project
 AIFFEL 교육과정 중 NLP Going Deeper Project와 내용 정리
 
-첫 번째 프로젝트 : 자연어 처리의 시작 임베딩 - [블로그 정리글](https://sda96.github.io/2021-12/NLP_1day)
+## 첫 번째 프로젝트 : 자연어 처리의 시작 임베딩 - [블로그 정리글](https://sda96.github.io/2021-12/NLP_1day)
 - [word2vec](https://arxiv.org/pdf/1301.3781.pdf)
 - [FastText](https://arxiv.org/pdf/1607.04606.pdf)
 - [GloVe](https://nlp.stanford.edu/pubs/glove.pdf)
@@ -13,8 +13,7 @@ AIFFEL 교육과정 중 NLP Going Deeper Project와 내용 정리
 - https://github.com/Kyubyong/wordvectors
 
 
-두 번째 프로젝트 : 단어장의 크기에 따른 머신 러닝 모델 성능 비교 - [블로그 정리글](https://sda96.github.io/2021-12/machine_learning_models_preview)
-
+## 두 번째 프로젝트 : 단어장의 크기에 따른 머신 러닝 모델 성능 비교 - [블로그 정리글](https://sda96.github.io/2021-12/machine_learning_models_preview)
 사용된 머신 러닝 모델
 - [MultiNB](https://www.youtube.com/watch?v=3JWLIV3NaoQ)
 - [ComNB](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.ComplementNB.html)
@@ -24,3 +23,10 @@ AIFFEL 교육과정 중 NLP Going Deeper Project와 내용 정리
 - [Random Forest](https://www.tibco.com/reference-center/what-is-a-random-forest)
 - [Gradient Boosting Tree](https://bkshin.tistory.com/entry/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-15-Gradient-Boost)
 - [Voting](https://stats.stackexchange.com/questions/349540/hard-voting-soft-voting-in-ensemble-based-methods)
+
+## 세 번째 프로젝트 : 임베딩내의 편향성 계산
+- [임베딩 벡터 편향성 문제 제기](https://arxiv.org/pdf/1607.06520.pdf)
+- [WEAT](https://arxiv.org/pdf/1608.07187.pdf)
+
+영어 사전 학습된 임베딩 벡터 다운로드
+- https://drive.google.com/u/0/uc?id=0B7XkCwpI5KDYNlNUTTlSS21pQmM&export=download
