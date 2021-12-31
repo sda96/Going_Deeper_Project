@@ -11,7 +11,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # 텍스트 전처리 함수
 def text_preprocessing(x):
-    x = re.sub("[^a-zA-Zㄱ-ㅎ가-힣,?!]+"," ", x)
+    x = re.sub("[^a-zA-Zㄱ-ㅎ가-힣,?!\"\']+"," ", x)
     x = re.sub("[ ]+"," ", x)
     x = x.strip()
     return x    
@@ -43,7 +43,7 @@ def word_index(dic, vocab_size):
     index_to_word = defaultdict()
     
     
-    dic = list(dic.items())[:(vocab_size - 2)]
+    dic = list(dic.items())[:(vocab_size - 4)]
     dic = dict(dic)
     for ind, word in enumerate(dic):
         word_to_index[word] = ind + 4
@@ -64,7 +64,7 @@ def word_index(dic, vocab_size):
 
 
 #  Mecab 토큰화, 패딩 적용
-def tokenization(corpus, dictionary, max_length = 0, padding = "pre"):
+def tokenization(corpus, dictionary, max_length = 0, padding = "post"):
     tokens = []
     for setence in tqdm(corpus):
         # 1은 unk 토큰의 인덱
@@ -96,19 +96,24 @@ def SentencePiece(model_type, data, vocab_size, add, train_test, temp_file = Non
         temp_file = f"./model/02_SentencePiece/{model_type}_{vocab_size}_pre{add}_{train_test}.tmp"
     
     with open(temp_file, 'w') as f:
-        for row in data["document"]:
+        for row in data:
             f.write(str(row) + '\n')
     spm_input = f"""
     --input={temp_file} 
-    --model_prefix={model_type}_{vocab_size}_spm 
+    --model_prefix={model_type}_{vocab_size}_{train_test}_spm 
     --vocab_size={vocab_size} 
     --model_type={model_type}
+    --unk_id=0 
+    --pad_id=1 
+    --bos_id=2 
+    --eos_id=3 
+    --user_defined_symbols=<pad>,<bos>,<eos>
     """
     spm_input = re.sub("\n", "", spm_input)
     spm.SentencePieceTrainer.Train(spm_input)
 
     s = spm.SentencePieceProcessor()
-    s.Load(f'{model_type}_{vocab_size}_spm.model')
+    s.Load(f'{model_type}_{vocab_size}_{train_test}_spm.model')
     return s
 
 
@@ -137,3 +142,12 @@ def load_embedding_matrix(path, vocab_size, embedding_size, idx_word):
             count += 1
     print(f"사전 학습에 사용 가능했던 단어 벡터 갯수 : {count}")
     return embedding_matrix
+
+
+# Series 타입의 구조에서 원하는 word가 있는 인덱스를 반환하고 해당 문장을 출력
+def find_word(word, sentences):
+    find_indexes = []
+    for idx, sentence in enumerate(sentences):
+        if re.findall(word, sentence):
+            find_indexes += [idx]
+    return sentences[find_indexes]
