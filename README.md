@@ -30,3 +30,8 @@ AIFFEL 교육과정 중 NLP Going Deeper Project와 내용 정리
 
 영어 사전 학습된 임베딩 벡터 다운로드
 - https://drive.google.com/u/0/uc?id=0B7XkCwpI5KDYNlNUTTlSS21pQmM&export=download
+
+
+## 네 번째, 다섯 번째 프로젝트 : Seq2seq, Transformer 모델로 번역기 만들기
+- [Seq2seq](https://arxiv.org/pdf/1409.3215.pdf)
+- [Transformer](https://arxiv.org/pdf/1706.03762.pdf)
