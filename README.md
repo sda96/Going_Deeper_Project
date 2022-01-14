@@ -35,3 +35,6 @@ AIFFEL 교육과정 중 NLP Going Deeper Project와 내용 정리
 ## 네 번째, 다섯 번째 프로젝트 : Seq2seq, [Transformer](https://sda96.github.io/2021-12/transformer_paper) 모델로 번역기 만들기
 - [Seq2seq](https://arxiv.org/pdf/1409.3215.pdf)
 - [Transformer](https://arxiv.org/pdf/1706.03762.pdf)
+
+## 여섯 번째 프로젝트 : Transformer 모델 성능 지표 BLEU score
+- [BLEU](https://wikidocs.net/31695)
