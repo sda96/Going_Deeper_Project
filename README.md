@@ -38,3 +38,9 @@ AIFFEL 교육과정 중 NLP Going Deeper Project와 내용 정리
 
 ## 여섯 번째 프로젝트 : Transformer 모델 성능 지표 BLEU score
 - [BLEU](https://wikidocs.net/31695)
+
+## 일곱 번째 프로젝트 : BERT 사전 학습 시키기
+- [BERT](https://arxiv.org/pdf/1810.04805.pdf)
+
+위키백과 덤프 데이터셋 kowiki.txt 다운로드
+- https://drive.google.com/u/0/uc?id=1Hkp-Wt7540rSZlNHDLvk5NlTEdWZLK1h&export=download
